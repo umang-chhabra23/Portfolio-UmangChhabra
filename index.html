@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Umang Chhabra — Digital Innovator</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Space+Grotesk:wght@400;500;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+
+  <!-- Ambient Interactive Glow -->
+  <div class="ambient-glow" data-ambient-glow></div>
 
   <!-- Custom Cursor -->
   <div class="cursor-dot" data-cursor-dot></div>
@@ -26,13 +35,15 @@
 
   <!-- HERO -->
   <section id="hero" class="center-align">
-    <div class="hero-content">
+    <div class="hero-content" data-scroll-parallax>
       <div class="hero-image-wrapper reveal">
-        <img src="file:///C:/Users/Narender/.gemini/antigravity/brain/3927a8ae-2b90-49c8-8096-ad9529adb00b/hero_portrait_1777749153212.png" alt="Umang Chhabra" class="hero-image" />
+        <img
+          src="file:///C:/Users/Narender/.gemini/antigravity/brain/3927a8ae-2b90-49c8-8096-ad9529adb00b/minimal_clouds_1777751225615.png"
+          alt="Black and White Clouds" class="hero-image" />
       </div>
       <h1 class="hero-name reveal">Umang Chhabra</h1>
     </div>
-    
+
     <div class="hero-scroll reveal">
       <div class="scroll-mouse">
         <div class="scroll-wheel"></div>
@@ -43,12 +54,14 @@
 
   <!-- ABOUT -->
   <section id="about" class="center-align">
-    <div class="about-container">
+    <div class="about-container" data-scroll-scale>
       <div class="section-label reveal">About Me</div>
       <h2 class="section-title reveal">Business, Tech &amp; Creativity.</h2>
       <div class="about-text reveal">
-        <p>I'm a <strong>BCom (Hons.) student at NMIMS Mumbai</strong>, blending business, technology, and storytelling.</p>
-        <p>Currently leading <strong>Digital Innovation at the NMIMS E-Cell</strong> and interning at Ratan J. Batliboi Consultancy.</p>
+        <p>I'm a <strong>BCom (Hons.) student at NMIMS Mumbai</strong>, blending business, technology, and storytelling.
+        </p>
+        <p>Currently leading <strong>Digital Innovation at the NMIMS E-Cell</strong> and interning at Ratan J. Batliboi
+          Consultancy.</p>
       </div>
     </div>
   </section>
@@ -109,41 +122,106 @@
     <div class="contact-container reveal">
       <div class="section-label">Let's Connect</div>
       <h2 class="section-title">Got an idea?<br />Let's talk.</h2>
-      
-      <div class="contact-links-center">
-        <a href="mailto:umangchh2306@gmail.com" class="contact-link-minimal" data-cursor="hover">umangchh2306@gmail.com</a>
-        <a href="https://www.linkedin.com/in/umangchhabra" target="_blank" class="contact-link-minimal" data-cursor="hover">LinkedIn</a>
+
+      <div class="connect-form-wrapper centered-form">
+        <form class="connect-form" onsubmit="event.preventDefault(); alert('Message sent!');">
+          <div class="form-group">
+            <input type="text" placeholder="Your Name" required />
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Email Address" required />
+          </div>
+          <div class="form-group">
+            <input type="tel" placeholder="WhatsApp Phone Number *" required />
+          </div>
+          <div class="form-group">
+            <textarea placeholder="Tell me about your project..." rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn-submit" data-cursor="hover">Send Message →</button>
+        </form>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="center-align">
-    <div class="footer-text">© 2026 Umang Chhabra · Built in Mumbai 🇮🇳</div>
+  <footer class="footer-minimal">
+    <div class="footer-socials">
+      <a href="mailto:umang.chhabra@icloud.com" data-cursor="hover" title="Email" aria-label="Email">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+          <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
+      </a>
+      <a href="https://instagram.com/umang.x23" target="_blank" data-cursor="hover" title="Instagram"
+        aria-label="Instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+      </a>
+      <a href="https://snapchat.com/add/umang.x23" target="_blank" data-cursor="hover" title="Snapchat"
+        aria-label="Snapchat">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 10h.01" />
+          <path d="M15 10h.01" />
+          <path d="M12 2a8 8 0 0 0-8 8v12l3-3 2.5 2.5L12 19l2.5 2.5L17 19l3 3V10a8 8 0 0 0-8-8z" />
+        </svg>
+      </a>
+      <a href="https://linkedin.com/in/umang-chhabra" target="_blank" data-cursor="hover" title="LinkedIn"
+        aria-label="LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+          <rect x="2" y="9" width="4" height="12"></rect>
+          <circle cx="4" cy="4" r="2"></circle>
+        </svg>
+      </a>
+      <a href="https://github.com/umang-chhabra23" target="_blank" data-cursor="hover" title="GitHub"
+        aria-label="GitHub">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+          </path>
+        </svg>
+      </a>
+    </div>
+    <div class="footer-text">© 2026 Umang Chhabra. All rights reserved.</div>
   </footer>
 
   <script>
-    // Custom Cursor
+    // Custom Cursor & Ambient Glow
     const cursorDot = document.querySelector("[data-cursor-dot]");
     const cursorOutline = document.querySelector("[data-cursor-outline]");
-    
+    const ambientGlow = document.querySelector("[data-ambient-glow]");
+
     // Check if device supports hover
     if (window.matchMedia("(pointer: fine)").matches) {
-      window.addEventListener("mousemove", function(e) {
+      window.addEventListener("mousemove", function (e) {
         const posX = e.clientX;
         const posY = e.clientY;
-        
+
         cursorDot.style.left = `${posX}px`;
         cursorDot.style.top = `${posY}px`;
-        
+
         cursorOutline.animate({
           left: `${posX}px`,
           top: `${posY}px`
         }, { duration: 500, fill: "forwards" });
+
+        // Ambient Glow follows cursor with delay
+        ambientGlow.animate({
+          left: `${posX}px`,
+          top: `${posY}px`
+        }, { duration: 3000, fill: "forwards", easing: "ease-out" });
       });
 
       // Hover effect on links
-      const links = document.querySelectorAll('a, .skill-tag, .btn-primary');
+      const links = document.querySelectorAll('a, .skill-tag, button');
       links.forEach(link => {
         link.addEventListener('mouseenter', () => {
           cursorOutline.classList.add('hover-active');
@@ -153,6 +231,34 @@
         });
       });
     }
+
+    // Scroll Micro-interactions (Parallax & Scale)
+    const parallaxEl = document.querySelector("[data-scroll-parallax]");
+    const scaleEl = document.querySelector("[data-scroll-scale]");
+    const heroScroll = document.querySelector(".hero-scroll");
+
+    window.addEventListener("scroll", () => {
+      const scrolled = window.scrollY;
+
+      // Hero subtle parallax
+      if (parallaxEl && scrolled < window.innerHeight) {
+        parallaxEl.style.transform = `translateY(${scrolled * 0.3}px) scale(${1 - scrolled * 0.0002})`;
+      }
+
+      // Fade out scroll indicator
+      if (heroScroll) {
+        heroScroll.style.setProperty('opacity', Math.max(0, 1 - scrolled / 250), 'important');
+      }
+
+      // About section subtle scale
+      if (scaleEl) {
+        const rect = scaleEl.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          const ratio = Math.max(0.95, Math.min(1, 1 - (rect.top - window.innerHeight / 2) * 0.0001));
+          scaleEl.style.transform = `scale(${ratio})`;
+        }
+      }
+    });
 
     // Intersection Observer for scroll reveals
     const observer = new IntersectionObserver((entries) => {
@@ -185,4 +291,5 @@
     });
   </script>
 </body>
+
 </html>
