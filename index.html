@@ -369,6 +369,10 @@
       <h2 class="section-title" style="text-align: center; margin-bottom: 4rem;">Got an idea?<br />Let's talk.</h2>
 
       <form class="contact-form centered-form" name="submit-to-google-sheet">
+        <div class="googly-eyes">
+          <div class="eye"><div class="pupil"></div></div>
+          <div class="eye"><div class="pupil"></div></div>
+        </div>
         <div class="form-group">
           <label>Your Name</label>
           <input type="text" name="Name" placeholder="John Doe" required />
@@ -623,6 +627,33 @@
           bgVideo.classList.add("spotlight-off");
         });
       }
+
+      // Googly Eyes Logic
+      const eyes = document.querySelectorAll('.eye');
+      window.addEventListener('mousemove', (e) => {
+        eyes.forEach(eye => {
+          const rect = eye.getBoundingClientRect();
+          const eyeX = rect.left + rect.width / 2;
+          const eyeY = rect.top + rect.height / 2;
+          
+          const angle = Math.atan2(e.clientY - eyeY, e.clientX - eyeX);
+          // Max pupil distance from center = (Eye Radius 20px) - (Pupil Radius 8px) - (Margin ~2px)
+          const maxDistance = 10;
+          
+          const distance = Math.min(
+            Math.hypot(e.clientX - eyeX, e.clientY - eyeY) / 15,
+            maxDistance
+          );
+          
+          const pupilX = Math.cos(angle) * distance;
+          const pupilY = Math.sin(angle) * distance;
+          
+          const pupil = eye.querySelector('.pupil');
+          if (pupil) {
+            pupil.style.transform = `translate(calc(-50% + ${pupilX}px), calc(-50% + ${pupilY}px))`;
+          }
+        });
+      });
     }
   </script>
 </body>

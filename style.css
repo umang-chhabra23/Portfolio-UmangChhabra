@@ -776,6 +776,51 @@ h2.section-title {
   border-radius: 14px;
   padding: 3rem;
   width: 100%;
+  position: relative;
+}
+
+.googly-eyes {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+}
+
+.eye {
+  width: 40px;
+  height: 40px;
+  background-color: var(--text);
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transform-origin: center;
+  animation: blink 5s infinite;
+  transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@keyframes blink {
+  0%, 46%, 49%, 51%, 54%, 100% {
+    transform: scaleY(1);
+  }
+  47.5%, 52.5% {
+    transform: scaleY(0.1);
+  }
+}
+
+.pupil {
+  width: 16px;
+  height: 16px;
+  background-color: var(--bg);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.05s linear;
 }
 
 .form-group { margin-bottom: 1.25rem; }
